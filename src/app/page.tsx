@@ -1,14 +1,15 @@
 import ThemeToggle from "@/components/shared/theme-toggle";
-import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="p-5 w-full min-h-screen">
-      <div className="w-full flex justify-end">
+      <div className="w-full gap-x-5 flex justify-end">
+        <UserButton/>
         <ThemeToggle/>
       </div>
-      <h1 className="font-barlow text-blue-500 font-bold">Bienvenue sur GoShop</h1>
-      <Button variant="destructive">Click Here</Button>
+      <h1 className="font-barlow text-blue-500">Page D&apos;acceuil</h1>
+      
     </div>
   );
 }
